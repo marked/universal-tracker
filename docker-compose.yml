@@ -11,4 +11,4 @@ services:
     build: ./
     container_name: tracker
     ports:
-      - "9292:9292"
+      - "80:80"
