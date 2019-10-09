@@ -11,11 +11,11 @@ var trackerConfig = env['tracker_config'];
 
 var app = require('http').createServer(httpHandler),
     io = require('socket.io').listen(app),
-    redis = require('redis').createClient(Number(env['redis_port'] || 6379),
-                                          env['redis_host'] || '127.0.0.1',
-                                          Number(env['redis_db'] || 0)),
+    redis = require('redis').createClient('redis://db:6379/1'),
     numberOfClients = 0,
     recentMessages = {};
+
+//Number(env['redis_port'] || 6379), env['redis_host'] || '127.0.0.1', Number(env['redis_db'] || 0)
 
 app.listen(8080);
 
