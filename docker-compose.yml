@@ -1,14 +1,24 @@
 version: '2'
 
 services:
-  redis:
+  db:
     image: redis
-    container_name: cache
+    container_name: db
     expose:
       - 6379
 
   tracker:
-    build: ./
+    build: ./tracker/
     container_name: tracker
+    depends_on:
+      - db
     ports:
       - "80:80"
+
+  broadcaster:
+    build: ./broadcaster/
+    container_name: broadcaster
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
