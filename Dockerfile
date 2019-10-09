@@ -1,4 +1,4 @@
-FROM ruby:2.0
+FROM phusion/passenger-ruby24
 
 WORKDIR /usr/src/app
 
@@ -8,5 +8,4 @@ RUN bundle install
 
 COPY . ./
 
-#CMD [ "bundle", "exec", "rackup", "--port", "80", "--host", "0.0.0.0" ]
-CMD [ "bundle", "exec", "rackup", "--port", "9292", "--host", "0.0.0.0" ]
+CMD [ "bundle", "exec", "rackup", "--port", "80", "--host", "0.0.0.0" ]
