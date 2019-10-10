@@ -8,4 +8,5 @@ RUN bundle install
 
 COPY . ./
 
-CMD [ "bundle", "exec", "rackup", "--port", "80", "--host", "0.0.0.0" ]
+#CMD [ "bundle", "exec", "rackup", "--port", "80", "--host", "0.0.0.0" ]
+CMD [ "bundle" , "exec" ,  "passenger" , "start" , "--port" , "80" ]
