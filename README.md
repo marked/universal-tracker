@@ -1,6 +1,9 @@
 # Dockerized Tracker with load-grab test case
 
 Usage:  
-docker-compose up db broadcaster tracker  
-docker-compose up grab  
+git clone http://  
+git branch patch-1  
+
+sudo docker-compose up db broadcaster tracker   #server-side  
+sudo docker-compose up grab    #client-side
 
