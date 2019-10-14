@@ -42,5 +42,3 @@ services:
   grab:
     build: load-grab
     container_name: grab
-    depends_on:
-      - tracker
