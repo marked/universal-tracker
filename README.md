@@ -1,9 +1,10 @@
 # Dockerized Tracker with load-grab test case
 
-Usage:  
-git clone http://  
-git branch patch-1  
+Setup:  
+git clone https://github.com/marked/universal-tracker.git  
+cd universal-tracker  
+git checkout docker-redisgem2  
 
+Run:  
 sudo docker-compose up db broadcaster tracker   #server-side  
-sudo docker-compose up grab    #client-side
-
+sudo docker-compose up grab    #client-side  
