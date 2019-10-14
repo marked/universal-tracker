@@ -41,4 +41,4 @@ services:
 
   grab:
     build: load-grab
-    container_name: grab
+    #container_name: grab  #comment out container naming to use docker-compose scaling

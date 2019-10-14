@@ -7,7 +7,10 @@ git checkout docker-redisgem2
 
 Run:  
 sudo docker-compose up db broadcaster tracker   #server-side  
-sudo docker-compose up grab    #client-side  
+
+sudo docker-compose up grab              #client-side  
+or  
+sudo docker-compose up -d --scale grab=2 #client-side
 
 Watch:  
 http://localhost/load/
