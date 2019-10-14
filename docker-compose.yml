@@ -38,3 +38,9 @@ services:
       - ./data-target:/data
     ports:
       - "873:873"
+
+  grab:
+    build: load-grab
+    container_name: grab
+    depends_on:
+      - tracker
