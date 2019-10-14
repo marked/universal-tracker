@@ -26,3 +26,15 @@ services:
       - db
     ports:
       - "8080:8080"
+
+  target:
+    image: warcforceone/ateam-airsync
+    container_name: target
+    environment:
+      - DISK_HARD_LIMIT=95
+      - DISK_LIMIT=85
+      - MAX_CONN=100
+    volumes:
+      - ./data-target:/data
+    ports:
+      - "873:873"
