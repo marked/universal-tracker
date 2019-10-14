@@ -231,7 +231,7 @@ pipeline = Pipeline(
         defaults={'downloader': downloader, 'version': VERSION},
         file_groups={
             'data': [
-                '/dev/null'
+                'pipeline.py'
             ]
         },
         id_function=stats_id_function,
