@@ -31,9 +31,9 @@ services:
     image: warcforceone/ateam-airsync
     container_name: target
     environment:
-      - DISK_HARD_LIMIT=95
-      - DISK_LIMIT=85
-      - MAX_CONN=100
+      - DISK_HARD_LIMIT=96
+      - DISK_LIMIT=94
+      - MAX_CONN=125
     volumes:
       - ./data-target:/data
     ports:

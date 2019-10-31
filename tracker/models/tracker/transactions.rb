@@ -322,8 +322,8 @@ module UniversalTracker
 
       def request_item(request_ip, downloader)
         replies = redis.pipelined do
-          redis.lpop("#{ prefix }todo:d:#{ downloader }")
-          redis.lpop("#{ prefix }todo")
+          redis.spop("#{ prefix }todo:d:#{ downloader }")
+          redis.spop("#{ prefix }todo")
         end
 
         downloader_item = replies[0]
