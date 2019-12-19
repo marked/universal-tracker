@@ -2,7 +2,7 @@ version: '2'
 
 services:
   db:
-    image: redis
+    image: redis:3.0.7-alpine
     container_name: db
     volumes:
       - ./data-db:/data
